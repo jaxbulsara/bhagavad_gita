@@ -1,0 +1,70 @@
+\documentclass{book}
+
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{varwidth}
+\usepackage{bookmark}
+
+\geometry{a6paper, margin=0.25in}
+\setlength{\parindent}{0pt}
+
+\setmainfont[Ligatures=TeX]{Liberation Serif}
+\newfontfamily\sanskrit{Sanskrit 2003}
+
+\titleformat{\section}
+{\center\normalfont\small}{}{0em}{}
+\titlespacing{\section}
+    {0pt}{0pt}{0pt}
+
+\newcommand{\chapterdrop}{\-\vspace{2cm}}
+\newcommand{\headerspace}{\vspace{1em}}
+\newcommand{\tab}{\-\hspace{1cm}}
+
+\newcommand{\headersanskrit}[1]{\sanskrit\normalsize{#1}}
+\newcommand{\headertransliteration}[1]{\normalfont\small\textit{#1}}
+\newcommand{\headertranslation}[1]{\normalfont\small{#1}}
+
+\newenvironment{passage} {
+    \center
+    \varwidth{\linewidth}
+} {
+    \endvarwidth
+    \endcenter
+}
+
+\newenvironment{gitaverse} {
+    \normalsize\sanskrit\begin{passage}
+} {
+    \end{passage}
+}
+
+\newenvironment{transliteration} {
+    \begin{passage}\itshape
+} {
+    \end{passage}
+}
+
+\begin{document}
+    \small
+    \include{dhyanam}
+    \include{chapter_01}
+    \include{chapter_02}
+    \include{chapter_03}
+    \include{chapter_04}
+    \include{chapter_05}
+    \include{chapter_06}
+    \include{chapter_07}
+    \include{chapter_08}
+    \include{chapter_09}
+    \include{chapter_10}
+    \include{chapter_11}
+    \include{chapter_12}
+    \include{chapter_13}
+    \include{chapter_14}
+    \include{chapter_15}
+    \include{chapter_16}
+    \include{chapter_17}
+    \include{chapter_18}
+\end{document}
